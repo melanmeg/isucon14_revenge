@@ -44,6 +44,3 @@ git-setup:
 	# git用の設定は適宜変更して良い
 	git config --global user.email "isucon@example.com"
 	git config --global user.name "isucon"
-
-	# deploykeyの作成
-	ssh-keygen -t ed25519 -C "" -f ~/.ssh/id_ed25519 -N ""
