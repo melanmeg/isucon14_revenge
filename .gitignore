@@ -1,0 +1,13 @@
+/*
+
+!/.github
+!/ansible
+!/markdowns
+!/webapp
+!/.gitignore
+!/Makefile
+!/README.md
+!/sample-alp-config.yml
+
+!/.local.env
+!/env.sh
