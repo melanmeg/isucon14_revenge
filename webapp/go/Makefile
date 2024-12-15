@@ -7,7 +7,7 @@ GIT_DIR:=/home/isucon
 BUILD_DIR:=$(GIT_DIR)/webapp/go
 SERVICE_NAME:=isuride-go.service
 
-ISUCON_DB_HOST:=127.0.0.1  # localhostだとbindしないので注意
+ISUCON_DB_HOST:=192.168.0.13  # localhostだとbindしないので注意
 ISUCON_DB_PORT:=3306
 ISUCON_DB_NAME:=isuride
 ISUCON_DB_USER:=isucon
