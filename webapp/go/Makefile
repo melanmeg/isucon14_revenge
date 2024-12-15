@@ -25,6 +25,7 @@ deploy:
 	# go build
 	go build -o isuride
 	sudo systemctl restart $(SERVICE_NAME)
+	sudo systemctl restart isuride-payment_mock.service
 	# nginx
 	sudo rm -f $(NGINX_LOG)
 	sudo systemctl restart nginx
