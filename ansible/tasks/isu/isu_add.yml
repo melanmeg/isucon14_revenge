@@ -1,17 +1,8 @@
-# バッククォート使うと構文エラーになるので注意
-- name: shell
-  become: false
-  shell: |
-    mysql -u isuconp -pisuconp isuconp -e "alter table comments add index comments_idx_1 (post_id, created_at DESC);"
-    mysql -u isuconp -pisuconp isuconp -e "alter table posts add index posts_idx_1 (created_at DESC);"
-    mysql -u isuconp -pisuconp isuconp -e "alter table comments add index comments_idx_2 (user_id);"
-  ignore_errors: true
-
 - name: Copy
   become: true
   copy:
-    src: ../../files/nginx/sites-available/isucon.conf
-    dest: /etc/nginx/sites-available/isucon.conf
+    src: ./files/nginx/sites-available/isuride.conf
+    dest: /etc/nginx/sites-available/isuride.conf
     mode: "0644"
     backup: true
 
@@ -19,10 +10,4 @@
   become: true
   systemd:
     name: nginx
-    state: restarted
-
-- name: mysql is restarted
-  become: true
-  systemd:
-    name: mysql
     state: restarted
